@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "First-Demo",
-    "slug": "First-Demo",
+    "name": "first-demo",
+    "slug": "first-demo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
