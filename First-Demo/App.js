@@ -1,5 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
+import * as firebase from 'firebase'
 
+const firebaseConfig = {
+  apiKey: "AIzaSyDOobM2YwutUJxcch8CurCqJBdbIFc6FkA",
+  authDomain: "fir-project-d2e3e.firebaseapp.com",
+  projectId: "fir-project-d2e3e",
+  storageBucket: "fir-project-d2e3e.appspot.com",
+  messagingSenderId: "826916131031",
+  appId: "1:826916131031:web:999ea1362c113ca947a092",
+  measurementId: "G-ZW4338BN1K"
+};
+
+if(firebase.apps.length === 0) {
+  firebase.initialiezeApp(firebaseConfig)
+}
 
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
