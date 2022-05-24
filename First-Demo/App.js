@@ -1,5 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import * as firebase from 'firebase'
+
+var firebase = require('firebase/app');
+
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyDOobM2YwutUJxcch8CurCqJBdbIFc6FkA",
@@ -11,14 +14,18 @@ const firebaseConfig = {
   measurementId: "G-ZW4338BN1K"
 };
 
-if(firebase.apps.length === 0) {
-  firebase.initialiezeApp(firebaseConfig)
-}
+
+// if(firebase.apps.length === 0) {
+//   firebase.initialiezeApp(firebaseConfig)
+  
+// }
 
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
 import LandingScreen from './components/auth/Landing';
+import RegisterScreen from './components/auth/Register';
+
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -26,6 +33,8 @@ export default function App() {
     <NavigationContainer>
     <Stack.Navigator initialRouteName="Landing">
       <Stack.Screen name = "Landing" component={LandingScreen} option={{ headerShown: false }} />
+      <Stack.Screen name = "Register" component={RegisterScreen}  />
+
     </Stack.Navigator>
     </NavigationContainer>
 

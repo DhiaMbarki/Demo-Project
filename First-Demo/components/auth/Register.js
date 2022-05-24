@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { View, Button, TextInput } from 'react-native'
 
+var firebase = require('firebase/app');
 
-export class Rgister extends Component {
+
+export class Register extends Component {
     constructor(props) {
         super(props) ;
 
@@ -14,8 +16,15 @@ export class Rgister extends Component {
         this.onSignUp + this.onSignUp.bind(this)
     }
   onSignUp() {
-
-  }
+        const { email, password, name} = this.state;
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((result) => {
+          console.log(result)
+        })
+        .catch((error) => {
+          console.log(error)
+  })
+} 
   render() {
     return (
       <View>
@@ -44,4 +53,4 @@ export class Rgister extends Component {
   }
 }
 
-export default Rgister
+export default Register
