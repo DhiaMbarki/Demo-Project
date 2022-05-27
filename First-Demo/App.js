@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 
-var firebase = require('firebase/app');
-
+z
 
 
 const firebaseConfig = {
@@ -15,10 +14,7 @@ const firebaseConfig = {
 };
 
 
-// if(firebase.apps.length === 0) {
-//   firebase.initialiezeApp(firebaseConfig)
-  
-// }
+
 
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
